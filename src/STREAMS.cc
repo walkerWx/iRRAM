@@ -136,10 +136,12 @@ orstream& iRRAM_out(orstream* s,const PARAM &x){
   if ( (ACTUAL_STACK.inlimit==0) && s->_respect_iteration){
   ACTUAL_STACK.inlimit++;
   if ((++rstream::requests) > rstream::outputs){
-    *(s->target) << x;
+    //*(s->target) << x;
     (rstream::outputs)++;
   }
-  ACTUAL_STACK.inlimit--;}else{ *(s->target) << x;}
+  ACTUAL_STACK.inlimit--;}else{ 
+      //*(s->target) << x;
+  }
   return *s;
 }
   
